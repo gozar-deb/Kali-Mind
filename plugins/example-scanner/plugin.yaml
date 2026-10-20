@@ -1,0 +1,19 @@
+name: example-scanner
+binary: example-scanner
+category: reconnaissance
+description: Example custom security tool plugin for Kali-Mind
+capabilities:
+  - port_scanning
+  - service_detection
+input_types:
+  - hostname
+  - ip
+  - cidr
+output_formats:
+  - text
+  - json
+risk_level: low
+tags:
+  - custom
+  - example
+version_flag: --version

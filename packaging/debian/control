@@ -1,0 +1,14 @@
+Source: kali-mind
+Section: utils
+Priority: optional
+Maintainer: Kali-Mind Contributors <noreply@example.com>
+Build-Depends: debhelper-compat (= 13), python3, python3-setuptools
+Standards-Version: 4.6.0
+Homepage: https://github.com/your-org/kali-mind
+
+Package: kali-mind
+Architecture: all
+Depends: python3, python3-typer, python3-rich, python3-httpx, python3-yaml, python3-pydantic
+Description: AI-powered Kali Linux security orchestration
+ Kali-Mind orchestrates authorized security testing with AI planning,
+ scope enforcement, and structured tool adapters.

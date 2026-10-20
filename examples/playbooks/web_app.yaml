@@ -1,0 +1,25 @@
+# Engagement playbook: Web application assessment
+name: web_app
+description: Authorized web application enumeration and scanning
+steps:
+  - description: Probe target HTTP services
+    tool: httpx
+    operation: probe
+    options:
+      tech_detect: true
+      status_code: true
+      title: true
+  - description: Fingerprint stack
+    tool: whatweb
+    operation: fingerprint
+  - description: Directory discovery
+    tool: feroxbuster
+    operation: scan
+  - description: Nuclei scan
+    tool: nuclei
+    operation: scan
+    options:
+      severity: medium,high,critical
+  - description: Nikto baseline
+    tool: nikto
+    operation: web_scan

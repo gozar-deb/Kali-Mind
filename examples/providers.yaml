@@ -1,0 +1,36 @@
+# Kali-Mind Provider Configuration
+# Place at ~/.kali-mind/providers.yaml
+# API keys should be in .env — never here
+
+openai:
+  enabled: true
+  model: gpt-4o-mini
+
+anthropic:
+  enabled: true
+  model: claude-3-5-haiku-20241022
+
+grok:
+  enabled: false
+  model: grok-beta
+
+gemini:
+  enabled: false
+  model: gemini-1.5-flash
+
+groq:
+  enabled: true
+  model: llama-3.1-8b-instant
+
+deepseek:
+  enabled: false
+  model: deepseek-chat
+
+mistral:
+  enabled: false
+  model: mistral-small-latest
+
+ollama:
+  enabled: true
+  endpoint: http://localhost:11434
+  model: llama3

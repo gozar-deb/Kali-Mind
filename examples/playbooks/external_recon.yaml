@@ -1,0 +1,22 @@
+# Engagement playbook: External reconnaissance
+name: external_recon
+description: Passive + active recon against authorized external targets
+steps:
+  - description: Passive subdomain enumeration
+    tool: subfinder
+    operation: enum
+  - description: Amass passive intel
+    tool: amass
+    operation: enum
+  - description: HTTP probing of discovered hosts
+    tool: httpx
+    operation: probe
+  - description: Technology fingerprinting
+    tool: whatweb
+    operation: fingerprint
+  - description: Vulnerability templates (safe severity)
+    tool: nuclei
+    operation: scan
+    options:
+      severity: low,medium,high,critical
+      rate_limit: 50

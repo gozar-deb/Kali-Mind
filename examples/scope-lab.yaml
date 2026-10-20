@@ -1,0 +1,22 @@
+# Kali-Mind Example Engagement Scope
+# Place this in ~/.kali-mind/scope.yaml to auto-load
+
+engagement:
+  name: local-lab
+
+authorized_targets:
+  - 192.168.56.10
+  - 192.168.56.0/24
+
+excluded_targets:
+  - 192.168.56.1    # Gateway — do not test
+
+allowed_categories:
+  - reconnaissance
+  - enumeration
+  - vulnerability_assessment
+  - web_security
+
+notes: |
+  Local lab environment for authorized security testing.
+  All targets are VMs running on VirtualBox host-only network.

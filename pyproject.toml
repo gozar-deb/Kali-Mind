@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kali-mind"
+version = "0.5.2"
+description = "AI-Powered Kali Linux Security Orchestration Platform"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Kali-Mind Contributors"}]
+keywords = ["security", "pentest", "kali", "ai", "orchestration", "red-team"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+]
+dependencies = [
+    "typer>=0.12",
+    "rich>=14.0",
+    "textual>=0.60",
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.2",
+    "httpx>=0.27",
+    "sqlalchemy>=2.0",
+    "aiosqlite>=0.20",
+    "python-dotenv>=1.0",
+    "jinja2>=3.1",
+    "reportlab>=4.2",
+    "pyyaml>=6.0",
+    "starlette>=0.37",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=5",
+    "httpx>=0.27",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+kali-mind = "kali_mind.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/your-org/kali-mind"
+Documentation = "https://github.com/your-org/kali-mind#readme"
+Issues = "https://github.com/your-org/kali-mind/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kali_mind*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+
+[project.entry-points."kali_mind.plugins"]
+# Third-party packages can register: myplugin = "my_pkg.plugin:register"

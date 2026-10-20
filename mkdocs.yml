@@ -1,0 +1,13 @@
+site_name: Kali-Mind Docs
+nav:
+  - Home: README.md
+  - Threat model: docs/threat-model.md
+  - Adapter guide: docs/adapter-authoring.md
+  - Offline / multi-user: docs/offline-and-multiuser.md
+  - Lab walkthrough: docs/lab/external-recon-walkthrough.md
+  - ADRs:
+      - Scope at execution: docs/adr/001-scope-at-execution.md
+      - Tool channel: docs/adr/002-untrusted-tool-channel.md
+      - Rate caps: docs/adr/003-rate-and-cost-caps.md
+theme:
+  name: readthedocs
